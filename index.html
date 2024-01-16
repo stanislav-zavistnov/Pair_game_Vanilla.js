@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pairs-game</title>
+  <script src="newMain.js" defer type="module"></script>
+</head>
+<body>
+  <style>
+    .container {
+      margin: 0 auto;
+      display: grid;
+      width: 500px;
+      height: 500px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .setup-btn {
+      display: block;
+    }
+
+    .closed-card {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background-color: rgb(11, 1, 126);
+      color: white;
+      cursor: pointer;
+      font-size: 0;
+      opacity: 1;
+      transition: opacity .3s ease-in-out;
+    }
+
+    .closed-card:hover {
+      opacity: 0.5;
+      transition: opacity .3s ease-in-out;
+    }
+
+    .opened-card {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      background-color: rgb(11, 1, 126);
+      color: white;
+      font-size: 60px;
+    }
+
+    .opened-card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .closed-card img {
+      display: none;
+    }
+
+    .successed-card {
+      filter: grayscale(100%);
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        width: 95vw;
+        height: 100vw;
+        max-width: 500px;
+        max-height: 500px;
+      }
+    }
+  </style>
+<div class="setup" style="display: flex; justify-content: center; margin-bottom: 50px; padding-top: 50px;">
+  <button class="setup-btn" style="margin-right: 5px; cursor: pointer; border-radius: 5px; padding: 5px; font-size: 20px; color: #ffffff; background-color: rgb(109, 2, 2);">
+    Start\Restart с цифрами
+  </button>
+  <button class="setup-btn-images" style="cursor: pointer; border-radius: 5px; padding: 5px; font-size: 20px; color: #ffffff; background-color: rgb(109, 2, 2);">
+    Start\Restart с картинками
+  </button>
+</div>
+<div class="container"></div>
+</body>
+</html>
